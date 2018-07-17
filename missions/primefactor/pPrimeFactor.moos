@@ -1,0 +1,9 @@
+//------------------------------------------------
+// pPrimeFactor config block
+
+ProcessConfig = pPrimeFactor
+{
+   AppTick   = 10
+   CommsTick = 4
+}
+

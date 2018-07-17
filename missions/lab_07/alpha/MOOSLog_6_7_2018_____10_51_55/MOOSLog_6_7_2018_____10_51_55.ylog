@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       ./MOOSLog_6_7_2018_____10_51_55/MOOSLog_6_7_2018_____10_51_55.ylog
+%% FILE OPENED ON  Wed Dec 31 19:00:00 1969
+%% LOGSTART               22963330729.2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6.79707    MOOS_DEBUG           pMarinePID           ** NEW CONTROLLER GAINS ARE ** 
+6.797565   MOOS_DEBUG           pMarinePID           YAW_PID_KP             = 1.200 
+6.797714   MOOS_DEBUG           pMarinePID           YAW_PID_KD             = 0.000 
+6.797852   MOOS_DEBUG           pMarinePID           YAW_PID_KI             = 0.300 
+6.798031   MOOS_DEBUG           pMarinePID           YAW_PID_INTEGRAL_LIMIT = 0.070 
+6.798344   MOOS_DEBUG           pMarinePID           MAXRUDDER              = 100.000 
+6.828403   MOOS_DEBUG           pMarinePID           SPEED_PID_KP           = 1.000 
+6.828587   MOOS_DEBUG           pMarinePID           SPEED_PID_KD           = 0.000 
+6.82869    MOOS_DEBUG           pMarinePID           SPEED_PID_KI           = 0.000 
+6.828827   MOOS_DEBUG           pMarinePID           SPEED_PID_INTEGRAL_LIMIT = 0.070 
+6.828976   MOOS_DEBUG           pMarinePID           MAXTHRUST              = 100.000 
+10.122     MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: ManualOverride 
+63.37455   MOOS_DEBUG           pMarinePID           pMarinePID Control Is On 
+63.37606   MOOS_DEBUG           pMarinePID           Paused Due To Tardy HELM Input: THRUST=0 
+63.84585   MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: clear 
+214.0703   MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: MissingDecVars:depth 
+214.3266   MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: clear 
+364.5206   MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: MissingDecVars:depth 
+364.7747   MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: MissingDecVars:depth 
+366.9029   MOOS_DEBUG           pMarinePID           Paused Due To Tardy HELM Input: THRUST=0 

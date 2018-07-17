@@ -1,0 +1,17 @@
+//------------------------------------------------------------------
+  // pLogger configuration block
+  ProcessConfig = Antler
+  {
+  // look on system path
+  ExecutablePath = system
+ 
+  // launch a DB
+  Run = MOOSDB  @NewConsole = true,XConfig=DBXConsoleSettings,Win32Config=DBW32ConsoleSettings
+ 
+ // xterm configuration for DB
+ DBXConsoleSettings = -bg, #FF0000,-fg,#FFFFFF,-geometry,80x12+2+00,+sb,-T,TheMOOSDB
+ 
+ // Win32 Configuration for DB
+ DBW32ConsoleSettings = BACKGROUND_RED	
+}
+

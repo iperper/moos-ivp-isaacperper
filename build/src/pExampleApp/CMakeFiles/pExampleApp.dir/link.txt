@@ -1,0 +1,1 @@
+/usr/bin/c++   -fPIC -g  -rdynamic CMakeFiles/pExampleApp.dir/main.cpp.o  -o ../../../bin/pExampleApp  -L/home/isaac/REX-UROP/moos-ivp/lib -Wl,-rpath,/home/isaac/REX-UROP/moos-ivp/lib /home/isaac/REX-UROP/moos-ivp/build/MOOS/MOOSCore/lib/libMOOS.a -lm -lpthread 

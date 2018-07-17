@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       ./MOOSLog_6_7_2018_____11_00_43/MOOSLog_6_7_2018_____11_00_43.ylog
+%% FILE OPENED ON  Wed Dec 31 19:00:00 1969
+%% LOGSTART               30617784869.5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8.855057   MOOS_DEBUG           pMarinePID           ** NEW CONTROLLER GAINS ARE ** 
+8.855957   MOOS_DEBUG           pMarinePID           YAW_PID_KP             = 1.200 
+8.856377   MOOS_DEBUG           pMarinePID           YAW_PID_KD             = 0.000 
+8.856758   MOOS_DEBUG           pMarinePID           YAW_PID_KI             = 0.300 
+8.857079   MOOS_DEBUG           pMarinePID           YAW_PID_INTEGRAL_LIMIT = 0.070 
+8.857479   MOOS_DEBUG           pMarinePID           MAXRUDDER              = 100.000 
+8.907776   MOOS_DEBUG           pMarinePID           SPEED_PID_KP           = 1.000 
+8.908295   MOOS_DEBUG           pMarinePID           SPEED_PID_KD           = 0.000 
+8.908619   MOOS_DEBUG           pMarinePID           SPEED_PID_KI           = 0.000 
+8.908958   MOOS_DEBUG           pMarinePID           SPEED_PID_INTEGRAL_LIMIT = 0.070 
+8.909317   MOOS_DEBUG           pMarinePID           MAXTHRUST              = 100.000 
+13.1416    MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: ManualOverride 
+93.7361    MOOS_DEBUG           pHelmIvP             pHelmIvP AllStop: clear 
+94.35884   MOOS_DEBUG           pMarinePID           pMarinePID Control Is On 
