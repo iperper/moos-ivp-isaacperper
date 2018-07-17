@@ -1,0 +1,64 @@
+
+ProcessConfig = pRex4                                                     
+{                                                                           
+  AppTick        = 10          // Ticks should be set to a value equal to or
+  CommsTick      = 10          // greater than the device output frequency  
+
+// endurance setting                                                            
+  Keep_Cast_Time = 30.0        // Seconds to keep station before cast start
+  Soak_Time      = 30.0        // Seconds to soak after wetting CTD
+  Dwell_Time     = 75.0        // Seconds to keep winch at depth before upcast
+  Pump_Time      = 2.0         // Seconds to run pump before winch drops CTD
+//  Per_M_Timeout  = 10.0        // Timeout in seconds per meter of cast depth
+  Drift_Radius   = 200.0        // Abort cast when drifting this distance from
+                               //    the casting location. (meters)
+  Init_Cast = $(INITAL_CAST_POINT_INDEX)
+
+  // Cast    = order, name, lat, lon, depth
+  //           Casts are sorted by the unique non-zero order number
+  //           Each cast has a unique name
+  //           Lat and lon are in decimal degrees
+  //           Depth must be 1.0 or greater positive real number
+ // Cast_Pos   = 1, SampleA, 42.358628, -71.087335, 3.0
+ // Cast_Pos   = 3, SampleC, 42.357888, -71.087469, 2.0
+ // Cast_Pos   = 2, SampleB, 42.356654, -71.087503, 2.0
+
+// triangle in op region - use altimeter to determine max depth 
+//    Cast_Pos   = 1, SampleA, 42.357870, -71.086375, 20
+//    Cast_Pos   = 2, SampleB, 42.357906, -71.085899, 20
+//    Cast_Pos   = 3, SampleC, 42.357582, -71.086342, 20
+
+// two points in op region, but (hopefully) within range of OCU on dock 
+//    Cast_Pos   = 1, SampleA, 42.357912, -71.087201, 20
+//    Cast_Pos   = 2, SampleB, 42.358110, -71.086780, 20
+//    Cast_Pos   = 3, SampleC, 42.357912, -71.087201, 20
+
+// point close to dock for GoPro of cast
+//    Cast_Pos   = 1, SampleA, 42.358111, -71.087351, 20 
+//    Cast_Pos   = 2, SampleB, 42.357321, -71.086769, 20
+//    Cast_Pos   = 3, SampleC, 42.356553, -71.086157, 20
+//    Cast_Pos   = 4, SampleD, 42.355491, -71.085381, 20
+//    Cast_Pos   = 5, SampleE, 42.354672, -71.084999, 20
+
+// Two points close to dock
+//    Cast_Pos   = 1, SampleA, 42.357657, -71.086803, 20
+//    Cast_Pos   = 2, SampleB, 42.358122, -71.085131, 20  
+//    Cast_Pos   = 3, SampleA, 42.357657, -71.086803, 20
+//    Cast_Pos   = 4, SampleB, 42.358122, -71.085131, 20  
+//    Cast_Pos   = 5, SampleA, 42.357657, -71.086803, 20
+//    Cast_Pos   = 6, SampleB, 42.358122, -71.085131, 20
+
+SP_2017
+	//Cast_Pos = 1, SampleA, 42.358040, -71.087611, 20
+	//Cast_Pos = 2, SampleB, 42.358184, -71.087054, 20  
+  
+  //further East
+  Cast_Pos = 1, SampleA, 42.358246, -71.085945, 20
+  Cast_Pos = 2, SampleB, 42.357820, -71.086184, 20  
+  Cast_Pos = 3, SampleA, 42.358246, -71.085945, 20
+  Cast_Pos = 4, SampleB, 42.357820, -71.086184, 20
+
+
+
+}
+

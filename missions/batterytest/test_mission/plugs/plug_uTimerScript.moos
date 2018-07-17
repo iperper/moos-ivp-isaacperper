@@ -1,0 +1,12 @@
+ProcessConfig = uTimerScript
+{
+   AppTick   = 4
+   CommsTick = 4
+
+   paused = false
+
+   event  = var=CTD_DATA, val=depth=20,  time=1.0
+
+   reset_max  = nolimit
+   reset_time = all-posted
+}

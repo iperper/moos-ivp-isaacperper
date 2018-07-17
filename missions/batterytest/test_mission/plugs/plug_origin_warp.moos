@@ -1,0 +1,20 @@
+// Unsure why this is required -PR
+//#ifdef SIMULATION true
+//  MOOSTimeWarp = $(WARP)
+//#else
+//  MOOSTimeWarp = 1
+//#endif
+
+MOOSTimeWarp = $(WARP)
+
+// MIT Sailing Pavilion
+LatOrigin  =  42.358456		
+LongOrigin = -71.087589	
+
+// Old North Church
+//LatOrigin  =  42.36638       
+//LongOrigin = -71.05458 
+
+// Center of harbor
+//LatOrigin  =  42.37014
+//LongOrigin = -71.04981 
