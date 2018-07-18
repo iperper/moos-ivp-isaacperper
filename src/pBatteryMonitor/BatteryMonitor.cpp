@@ -36,7 +36,7 @@ BatteryMonitor::~BatteryMonitor()
 
 bool BatteryMonitor::OnNewMail(MOOSMSG_LIST &NewMail)
 {
-  AppCastingMOOSApp::OneNewMail(NewMail);
+  AppCastingMOOSApp::OnNewMail(NewMail);
   MOOSMSG_LIST::iterator p;
    
   for(p=NewMail.begin(); p!=NewMail.end(); p++) {
@@ -145,7 +145,7 @@ void BatteryMonitor::RegisterVariables()
   Register("BATTERY_NMEA_STRING");
 }
 
-bool YourMOOSApp::buildReport()
+bool BatteryMonitor::buildReport()
 {
   m_msgs << "BATT_CURRENT: " << m_current << endl; 
   m_msgs << "BATT_VOLTAGE: " << m_voltage << endl; 

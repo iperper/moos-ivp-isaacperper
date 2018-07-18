@@ -5,7 +5,7 @@ ProcessConfig = iGPSReadSerial
 {
    AppTick   = 100
    CommsTick = 4
-   SerialPort = "/dev/BAT_MON"
+   SerialPort = /dev/BAT_MON
    SerialBaud = 9600
-   MOOS_PUB_VAR = "BATTERY_NMEA_STRING"
+   MOOS_PUB_VAR = BATTERY_NMEA_STRING
 }

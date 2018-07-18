@@ -6,4 +6,3 @@ ProcessConfig = pBatteryMonitor
    AppTick   = 4
    CommsTick = 4
 }
-

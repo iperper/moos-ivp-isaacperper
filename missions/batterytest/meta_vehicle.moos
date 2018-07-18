@@ -26,11 +26,11 @@ Processconfig = ANTLER
 
 }
   
+#include plugs/plug_pBatteryMonitor.moos
 #include plugs/plug_uFldNodeBroker.moos 
 #include plugs/plug_pShare.moos
 #include plugs/plug_pHostInfo.moos
 
-#include plugs/plug_uSimMarine.moos
 #include plugs/plug_pHelmIvP.moos
 #include plugs/plug_pLogger.moos
 #include plugs/plug_pNodeReporter.moos
@@ -38,5 +38,4 @@ Processconfig = ANTLER
 
 #include plugs/plug_iGPSReadSerial.moos
 #include plugs/plug_uProcessWatch.moos
-
 #include plugs/plug_pRex4.moos
