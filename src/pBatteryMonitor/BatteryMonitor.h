@@ -33,7 +33,7 @@ class BatteryMonitor : public AppCastingMOOSApp
  private: // Configuration variables
 
  private: // State variables
-  double m_current, m_voltage, m_mAh, m_percent_remaining;
+  double m_current, m_voltage, m_mAh, m_percent_remaining, m_min_SoC, m_min_voltage, m_batt_mAh;
   std::string  m_status;
 };
 

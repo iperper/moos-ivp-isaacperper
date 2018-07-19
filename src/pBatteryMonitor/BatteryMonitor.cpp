@@ -22,6 +22,9 @@ BatteryMonitor::BatteryMonitor()
   m_mAh = 0.0;
   m_percent_remaining = 100.0;
   m_status = "OK"; 
+  m_batt_mAh = 0.0;
+  m_min_SoC = 0.3;
+  m_min_voltage = 11.3;
 }
 
 //---------------------------------------------------------
@@ -70,9 +73,14 @@ bool BatteryMonitor::OnNewMail(MOOSMSG_LIST &NewMail)
 bool BatteryMonitor::handleBattery(vector<string> &parsed){
   m_current = strtod(parsed[1].c_str(),0); 
   m_voltage = strtod(parsed[2].c_str(),0); 
-  m_mAh = strtod(parsed[3].c_str(),0); 
-  m_percent_remaining = strtod(parsed[4].c_str(),0); 
-  m_status = parsed[5];
+  m_mAh = m_batt_mAh - strtod(parsed[3].c_str(),0); 
+  m_percent_remaining = m_mAh/m_batt_mAh*100; 
+  if (m_percent_remaining/100 < m_min_SoC || m_voltage < m_min_voltage){
+    m_status = "LOW";
+  }
+  else
+    m_status = "OK";
+
 
   Notify("BATT_CURRENT", m_current);
   Notify("BATT_VOLTAGE", m_voltage);
@@ -119,14 +127,17 @@ bool BatteryMonitor::OnStartUp()
     list<string>::iterator p;
     for(p=sParams.begin(); p!=sParams.end(); p++) {
       string line  = *p;
-      string param = tolower(biteStringX(line, '='));
+      string param = toupper(biteStringX(line, '='));
       string value = line;
       
-      if(param == "foo") {
-        //handled
+      if(param == "BATT_MAH") {
+        m_batt_mAh = strtod(value.c_str(),0);
       }
-      else if(param == "bar") {
-        //handled
+      else if(param == "MIN_SOC") {
+        m_min_SoC = strtod(value.c_str(),0);
+      }
+      else if(param == "MIN_VOLTAGE"){
+        m_min_voltage = strtod(value.c_str(),0);
       }
     }
   }
