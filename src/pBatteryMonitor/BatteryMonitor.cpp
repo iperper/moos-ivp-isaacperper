@@ -48,7 +48,7 @@ bool BatteryMonitor::OnNewMail(MOOSMSG_LIST &NewMail)
       string nmea = msg.GetString();
       // TODO: check checksum
       vector<string> parsed = parseString(nmea, "|");
-      cout << parsed[0] << endl;
+      //cout << parsed[0] << endl;
       handleBattery(parsed);
     }
   } 
