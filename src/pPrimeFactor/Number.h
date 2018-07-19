@@ -6,7 +6,7 @@
 
 * CREATED: 02 Jul 2018
 
-* MODIFIED: Thu 05 Jul 2018 11:47:28 AM EDT
+* MODIFIED: Thu 19 Jul 2018 09:01:08 AM EDT
 
 * CREATED BY: Isaac Perper 
 
@@ -31,11 +31,11 @@ class Number
     char* outPrimes(unsigned int calc, double time);
 
   protected:
-    uint64_t init_num = -1;
+    uint64_t init_num = 0;
     std::vector<uint64_t> prime_factors;
-    uint64_t current_factor = -1;
-    uint64_t current_num = -1;
-    unsigned int received = -1;
+    uint64_t current_factor = 0;
+    uint64_t current_num = 0;
+    unsigned int received = 0;
     double start_time = -1;
 };
 
