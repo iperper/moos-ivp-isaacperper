@@ -71,7 +71,7 @@ bool BatteryMonitor::OnNewMail(MOOSMSG_LIST &NewMail)
 }
 
 bool BatteryMonitor::handleBattery(vector<string> &parsed){
-  if (parsed[0].find("$") == 0 || parsed.size() == 4){
+  if (parsed.size() == 4){
     m_current = strtod(parsed[1].c_str(),0); 
     m_voltage = strtod(parsed[2].c_str(),0); 
     m_mAh = m_batt_mAh - strtod(parsed[3].c_str(),0); 
@@ -81,13 +81,14 @@ bool BatteryMonitor::handleBattery(vector<string> &parsed){
     }
     else
       m_status = "OK";
-  }
 
   Notify("BATT_CURRENT", m_current);
   Notify("BATT_VOLTAGE", m_voltage);
   Notify("BATT_mAH", m_mAh, m_percent_remaining);
   Notify("BATT_%_REMAINING", m_percent_remaining);
   Notify("BATT_STATUS", m_status);
+  }
+
 }
 
 //---------------------------------------------------------
@@ -163,7 +164,7 @@ bool BatteryMonitor::buildReport()
   m_msgs << "BATT_VOLTAGE: " << m_voltage << endl; 
   m_msgs << "BATT_mAH: " << m_mAh << endl; 
   m_msgs << "BATT_%_REMAINING: " << m_percent_remaining << endl; 
-  m_msgs << "BATT_STATUS: " << m_status << endl; 
+  m_msgs << "BATT_STATUS: " << m_status << endl;
   return(true);
 }
 
