@@ -71,16 +71,17 @@ bool BatteryMonitor::OnNewMail(MOOSMSG_LIST &NewMail)
 }
 
 bool BatteryMonitor::handleBattery(vector<string> &parsed){
-  m_current = strtod(parsed[1].c_str(),0); 
-  m_voltage = strtod(parsed[2].c_str(),0); 
-  m_mAh = m_batt_mAh - strtod(parsed[3].c_str(),0); 
-  m_percent_remaining = m_mAh/m_batt_mAh*100; 
-  if (m_percent_remaining/100 < m_min_SoC || m_voltage < m_min_voltage){
-    m_status = "LOW";
+  if (parsed[0].find("$") == 0 || parsed.size() == 4){
+    m_current = strtod(parsed[1].c_str(),0); 
+    m_voltage = strtod(parsed[2].c_str(),0); 
+    m_mAh = m_batt_mAh - strtod(parsed[3].c_str(),0); 
+    m_percent_remaining = m_mAh/m_batt_mAh*100; 
+    if (m_percent_remaining/100 < m_min_SoC || m_voltage < m_min_voltage){
+      m_status = "LOW";
+    }
+    else
+      m_status = "OK";
   }
-  else
-    m_status = "OK";
-
 
   Notify("BATT_CURRENT", m_current);
   Notify("BATT_VOLTAGE", m_voltage);
