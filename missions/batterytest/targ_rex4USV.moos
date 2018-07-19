@@ -29,7 +29,7 @@ LongOrigin = -71.087589
 //------------------------------------------------------------
 Processconfig = ANTLER
 {
-  MSBetweenLaunches = 100
+  MSBetweenLaunches = 200
    
   Run = MOOSDB             @ NewConsole = false
   Run = pLogger            @ NewConsole = false
@@ -53,6 +53,9 @@ ProcessConfig = pBatteryMonitor
 {
    AppTick   = 4
    CommsTick = 4
+   BATT_mAh = 55000
+   min_soc = 0.35
+   min_voltage = 11.5
 }
 
 //--------------------------------------------------
@@ -175,7 +178,7 @@ ProcessConfig = iGPSReadSerial
 {
    AppTick   = 100
    CommsTick = 4
-   SerialPort = /dev/ttyACM0
+   SerialPort = /dev/BAT_MON
    SerialBaud = 9600
    MOOS_PUB_VAR = BATTERY_NMEA_STRING
 }

@@ -5,4 +5,7 @@ ProcessConfig = pBatteryMonitor
 {
    AppTick   = 4
    CommsTick = 4
+   BATT_mAh = 55000
+   min_soc = 0.35
+   min_voltage = 11.5
 }
