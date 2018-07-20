@@ -20,7 +20,9 @@ Processconfig = ANTLER
   Run = pHostInfo          @ NewConsole = false
   Run = uFldNodeBroker     @ NewConsole = false
   Run = pBatteryMonitor    @ NewConsole = false
-  Run = iGPSReadSerial     @ NewConsole = false
+  Run = iGPSReadSerial     @ NewConsole = false ~ iGPSReadSerial_bat
+  Run = iGPSReadSerial     @ NewConsole = false ~ iGPSReadSerial_gps
+  Run = pParseGPSNMEA      @ NewConsole = false
 //  Run = pRex4              @ NewConsole = false
 
 
@@ -35,7 +37,9 @@ Processconfig = ANTLER
 #include plugs/plug_pLogger.moos
 #include plugs/plug_pNodeReporter.moos
 
+#include plugs/plug_iGPSReadSerial_bat.moos
+#include plugs/plug_iGPSReadSerial_gps.moos
+#include plugs/plug_pParseGPSNMEA.moos
 
-#include plugs/plug_iGPSReadSerial.moos
 #include plugs/plug_uProcessWatch.moos
 #include plugs/plug_pRex4.moos
