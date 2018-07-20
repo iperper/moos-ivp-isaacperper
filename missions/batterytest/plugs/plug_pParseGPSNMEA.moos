@@ -1,0 +1,15 @@
+//------------------------------------------------
+// pParseGPSNMEA config block
+
+ProcessConfig = pParseGPSNMEA
+{
+   AppTick   = 10
+   CommsTick = 10
+   
+   HEADING_SOURCE  = PASHR      // none or blank: no published GPS heading 
+                                // GPRMC: heading is published from $GPRMC
+                                // PASHR: heading is published from $PASHR
+   HEADING_OFFSET  = -90.0      // If publishing heading, this offset value
+   SWAP_PITCH_ROLL = true       // If true, swaps pitch and roll values.
+}
+

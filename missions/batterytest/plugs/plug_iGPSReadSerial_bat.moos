@@ -1,0 +1,11 @@
+//------------------------------------------------
+// iGPSReadSerial config block
+
+ProcessConfig = iGPSReadSerial_bat
+{
+   AppTick   = 100
+   CommsTick = 4
+   SerialPort = /dev/BAT_MON
+   SerialBaud = 9600
+   MOOS_PUB_VAR = BATTERY_NMEA_STRING
+}

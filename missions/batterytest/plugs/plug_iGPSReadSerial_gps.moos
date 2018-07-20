@@ -1,0 +1,13 @@
+//------------------------------------------------
+// iGPSReadSerial config block
+
+ProcessConfig = iGPSReadSerial_gps
+{
+
+   AppTick   = 4
+   CommsTick = 4
+   SerialPort = /dev/GPS_HEMI
+   SerialBaud = 57600
+   MOOS_PUB_VAR =GPS_NMEA_STRING 
+}
+   
