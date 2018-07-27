@@ -2,3 +2,8 @@
 
 build/*
 !build/.gitkeep
+
+*.*log
+
+LOG*
+MOOSLog*
